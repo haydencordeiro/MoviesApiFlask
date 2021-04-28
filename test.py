@@ -5,8 +5,8 @@ from flask import request
 from flask import jsonify
 client = MongoClient(
     "mongodb+srv://test:test@cluster0.vsegj.mongodb.net/<Cluster0>?retryWrites=true&w=majority")
-db = client.get_database('dbname')
-records = db.collname
+db = client.get_database('dbname')#database name here
+records = db.collname#table name here
 
 print(records.count_documents({}))
 
